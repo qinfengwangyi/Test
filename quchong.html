@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div><div></div>
+</div>
+</body>
+</html>
+<script>
+	var arrary = [1,1,2,3,4,5,5];
+	(function a(){
+		document.write("arrary[i] normal:");
+		for (var i = 0; i <= arrary.length - 1; i++) {
+			// alert(arrary[i]);
+			document.write(arrary[i] + "+");
+			// console.log(arrary[i]);
+		};
+	}(arrary));
+	
+	function oSort(arr){
+		var result ={};
+		var newArr=[];
+		for(var i=0;i<arr.length;i++)
+		{
+			// document.write(result[arr]+"前<br/>");
+			if(!result[arr])
+			{
+				// document.write(result[arr+"后<br/>"]);
+				newArr.push(arr);
+				result[arr]=1;
+			}
+		}
+		return newArr;
+	};
+
+	var newarr = oSort(arrary);
+
+	!(function b(){
+		document.write("<br/>newarr[i] change:");
+		for (var i = 0; i <= newarr.length - 1; i++) {
+			document.write(newarr[i] + "+");
+		};
+	})(newarr);
+
+</script>
